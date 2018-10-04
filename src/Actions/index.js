@@ -1,6 +1,15 @@
-export function selectTheme(theme) {
+import { StyleSheet, css } from "aphrodite";
+
+export function selectTheme() {
   return {
     type: "CHANGE_THEME",
-    payload: theme
+    payload: StyleSheet.create({
+      Button: {
+        backgroundColor: "purple"
+      },
+      Text: {
+        color: "green"
+      }
+    })
   };
 }
