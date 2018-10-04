@@ -1,5 +1,4 @@
 import React from "react";
-//import { MyButton, MyP } from "./glamorous/styles.js";
 import { StyleSheet, css } from "aphrodite";
 import { selectTheme } from "../Actions";
 import { connect } from "react-redux";
@@ -53,6 +52,3 @@ export default connect(
   mapDispatchToProps
 )(App);
 
-//export default Tontin;
-
-//Pendejo reciba los import que están mal hechos
