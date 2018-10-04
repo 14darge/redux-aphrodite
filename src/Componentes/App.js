@@ -3,7 +3,6 @@ import { StyleSheet, css } from "aphrodite";
 import { selectTheme } from "../Actions";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-
 class App extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -12,7 +11,6 @@ class App extends React.PureComponent {
     };
     this.handleClick = this.handleClick.bind(this);
   }
-
   handleClick() {
     this.setState(prevState => {
       return {
@@ -20,7 +18,6 @@ class App extends React.PureComponent {
       };
     });
   }
-
   render() {
     return (
       <div>
@@ -36,19 +33,15 @@ class App extends React.PureComponent {
     );
   }
 }
-
 function mapStateToProps(state) {
   return {
     themes: state.themes
   };
 }
-
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({ selectTheme: selectTheme }, dispatch);
 }
-
 export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(App);
-
