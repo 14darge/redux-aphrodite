@@ -1,8 +1,11 @@
 import React from "react";
+//import { MyButton, MyP } from "./glamorous/styles.js";
 import { StyleSheet, css } from "aphrodite";
 import { selectTheme } from "../Actions";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import "./app.css";
+
 class App extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -11,18 +14,25 @@ class App extends React.PureComponent {
     };
     this.handleClick = this.handleClick.bind(this);
   }
+
   handleClick() {
     this.setState(prevState => {
       return {
-        mensaje: prevState.mensaje === "One" ? "Two" : "One",
+        mensaje: prevState.mensaje === "One" ? "Two" : "One"
       };
     });
   }
+
   render() {
     return (
       <div>
+        <div className={css(this.props.themes.Pablito)}>
+          <p className="clavito">
+            kjasdfjkbasdkbjsadvkl
+          </p>
+        </div>
         <button
-          className={css(this.props.themes.Button)}
+          className={"appStyle " + css(this.props.themes.Button)}
           onClick={this.handleClick}
         >
           Click Me
@@ -33,15 +43,22 @@ class App extends React.PureComponent {
     );
   }
 }
+
 function mapStateToProps(state) {
   return {
     themes: state.themes
   };
 }
+
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({ selectTheme: selectTheme }, dispatch);
 }
+
 export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(App);
+
+//export default Tontin;
+
+//Pendejo reciba los import que están mal hechos
