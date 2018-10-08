@@ -1,5 +1,4 @@
 import React from "react";
-//import { MyButton, MyP } from "./glamorous/styles.js";
 import { StyleSheet, css } from "aphrodite";
 import { selectTheme } from "../Actions";
 import { connect } from "react-redux";
