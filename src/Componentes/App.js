@@ -58,7 +58,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(App);
-
-//export default Tontin;
-
-//Pendejo reciba los import que están mal hechos
