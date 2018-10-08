@@ -1,4 +1,5 @@
 import React from "react";
+//import { MyButton, MyP } from "./glamorous/styles.js";
 import { StyleSheet, css } from "aphrodite";
 import { selectTheme } from "../Actions";
 import { connect } from "react-redux";
@@ -27,7 +28,7 @@ class App extends React.PureComponent {
       <div>
         <div className={css(this.props.themes.Pablito)}>
           <p className="clavito">
-            kjasdfjkbasdkbjsadvkl
+            Hello World!
           </p>
         </div>
         <button

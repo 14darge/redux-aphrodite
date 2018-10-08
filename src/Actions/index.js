@@ -5,10 +5,16 @@ export function selectTheme() {
     type: "CHANGE_THEME",
     payload: StyleSheet.create({
       Button: {
-        backgroundColor: "purple"
+        backgroundColor: "grey"
       },
       Text: {
-        color: "green"
+        color: "blue"
+      },
+      Pablito: {
+        ":first-child .clavito": {
+          // " .clavito": {
+          color: "blue"
+        }
       }
     })
   };
